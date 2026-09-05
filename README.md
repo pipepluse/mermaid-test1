@@ -25,3 +25,17 @@ sequenceDiagram
     G-->>A: Repository contents
     A-->>U: Render Mermaid diagram
 ```
+
+## Clickable nodes
+
+Try clicking the **GitHub** or **Mermaid** nodes below.
+
+```mermaid
+flowchart LR
+    A[Start] --> B[GitHub]
+    B --> C[Mermaid]
+    C --> D[Finish]
+
+    click B "https://github.com" "Open GitHub"
+    click C "https://mermaid.js.org" "Open Mermaid"
+```
