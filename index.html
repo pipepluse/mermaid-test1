@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mermaid Test 1</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      line-height: 1.6;
-    }
-  </style>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
 </head>
 <body>
-  <h1>Hello from Mermaid Test 1</h1>
-  <p>This is a simple HTML page stored directly in GitHub.</p>
-  <p>Nothing fancy — just HTML and a little CSS.</p>
+  <h1>Mermaid in HTML</h1>
+
+  <div class="mermaid">
+    flowchart TD
+      A[Start] --> B{Is it working?}
+      B -->|Yes| C[Awesome!]
+      B -->|No| D[Debug it]
+      D --> B
+  </div>
 </body>
 </html>
